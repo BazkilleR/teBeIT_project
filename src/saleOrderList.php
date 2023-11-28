@@ -13,7 +13,7 @@ if ($result) {
         $sale_name = $dbarr["sale_name"];
         $status = $dbarr["status"];
         echo <<<HTML
-            <a href="orderDetail.php?id=$id">
+            <a href="saleOrderDetail.php?id=$id">
                 <div class="bg-sky-400 p-4 border border-black hover:bg-sky-600">
                     <h1>order $id</h1>
                     <p>product : $product_name</p>
