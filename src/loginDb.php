@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require "server.php";
 
 // Sale login
@@ -18,6 +20,7 @@ if ($_POST["saleLogin"]) {
         $dbarr = $result->fetch_assoc();
 
         if ($dbarr && $username == $dbarr["username"] && $password == $dbarr["password"]) {
+            $_SESSION["username"] = $username;
             header("Location: homeSale.php");
             exit();
         } else {
