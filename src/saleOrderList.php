@@ -14,6 +14,7 @@ if ($result) {
         $amount = $dbarr["amount"];
         $price = $dbarr["price"];
         $sale_name = $dbarr["sale_name"];
+        $date_time = $dbarr["date_time"];
 
         $status = $dbarr["status"];
         if ($status == "confirm") {
@@ -30,8 +31,8 @@ if ($result) {
                     <div class="flex items-center justify-between">
                     <div class="flex flex-col">
                         <div class="text-2xl font-bold">Order #$id</div>
-                        <div>Date : 18/5/2549</div>
-                        <div>From : $sale_name</div>
+                        <div class="text-gray-500">$date_time</div>
+                        <div>$sale_name</div>
                     </div>
                     <div class="">
                         <img
