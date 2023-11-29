@@ -27,7 +27,7 @@
           <label for="products" class="text-lg">Product</label>
           <select name="product" class="border border-black rounded-lg h-10 text-lg p-1 focus:border-blue-500 focus:outline-none">
             <option disabled selected value>-</option>
-            <option value=" lactasoy">Lactasoy</option>
+            <option value="lactasoy">Lactasoy</option>
             <option value="mirinda">Miranda</option>
             <option value="seven_up">Seven_up</option>
           </select>
