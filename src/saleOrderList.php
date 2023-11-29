@@ -11,15 +11,33 @@ if ($result) {
         $amount = $dbarr["amount"];
         $price = $dbarr["price"];
         $sale_name = $dbarr["sale_name"];
+
         $status = $dbarr["status"];
+        if ($status == "confirm") {
+            $statusImg = "../src/img/pass.PNG";
+        } else {
+            $statusImg = "../src/img/wait.PNG";
+        }
+
         echo <<<HTML
             <a href="saleOrderDetail.php?id=$id">
-                <div class="bg-sky-400 p-4 border border-black hover:bg-sky-600">
-                    <h1>order $id</h1>
-                    <p>product : $product_name</p>
-                    <p>price : $price Baht</p>
-                    <p>from : $sale_name</p>
-                    <p>status : $status</p>
+                <div
+                    class="rounded-lg bg-gradient-to-tr from-blue-100 to-[#20A3BF] p-4 hover:from-pink-500 hover:to-yellow-500"
+                >
+                    <div class="flex items-center justify-between">
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-bold">Order #$id</div>
+                        <div>Date : 18/5/2549</div>
+                        <div>From : $sale_name</div>
+                    </div>
+                    <div class="">
+                        <img
+                        src="$statusImg"
+                        width="75"
+                        height="75"
+                        />
+                    </div>
+                    </div>
                 </div>
             </a>
         HTML;

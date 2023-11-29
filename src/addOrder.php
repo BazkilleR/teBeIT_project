@@ -9,10 +9,10 @@
 </head>
 
 <body>
-  <div class="container mx-auto p-4">
-    <div class="m-auto flex h-screen flex-col rounded-xl border bg-sky-300 p-4">
+  <div class="container m-auto h-screen gap-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-100 to-[#004AAD] p-6">
+    <div class="flex h-full w-full flex-col gap-4 overflow-y-auto rounded-2xl bg-white p-6">
       <form action="addOrderDb.php" method="post">
-        <h1 class="mb-4 text-center text-4xl">Order</h1>
+        <h1 class="mb-4 text-center text-4xl">Add order</h1>
         <?php if (isset($_GET['success'])) { ?>
           <p class="border border-green-500 bg-green-300">
             <?php echo $_GET['success']; ?>
@@ -23,27 +23,24 @@
             <?php echo $_GET['error']; ?>
           </p>
         <?php } ?>
-        <div class="mb-4 gap-2">
-          <label for="products">Product :</label>
-          <select name="product" class="border border-black">
+        <div class="mb-4 gap-2 flex flex-col">
+          <label for="products" class="text-lg">Product</label>
+          <select name="product" class="border border-black rounded-lg h-10 text-lg p-1 focus:border-blue-500 focus:outline-none"">
             <option disabled selected value>-</option>
-            <option value="lactasoy">Lactasoy</option>
+            <option value=" lactasoy">Lactasoy</option>
             <option value="mirinda">Miranda</option>
             <option value="seven_up">Seven_up</option>
           </select>
         </div>
-        <div class="mb-4 flex flex-col gap-1">
-          <label for="amount">Amount</label>
-          <input type="number" name="amount" class="border border-black" />
+        <div class="mb-8 flex flex-col gap-1">
+          <label for="amount" class="text-lg">Amount</label>
+          <input type="number" name="amount" placeholder="-" class="border border-black rounded-lg h-10 text-lg p-[.60rem] focus:border-blue-500 focus:outline-none" />
         </div>
         <div class="mb-4 flex flex-col gap-1">
-          <p>Total price : <span class="text-right">xx</span> Baht</p>
+          <input type="reset" value="CLEAR" class="font-bold flex items-center justify-center rounded-xl bg-gradient-to-tr from-blue-100 to-[#20A3BF] p-4 hover:from-pink-500 hover:to-yellow-500" />
         </div>
         <div class="mb-4 flex flex-col gap-1">
-          <input type="reset" value="clear" class="border border-black bg-red-400 px-8 py-4 hover:bg-red-300" />
-        </div>
-        <div class="mb-4 flex flex-col gap-1">
-          <input type="submit" value="order" name="submit" class="border border-black bg-sky-500 px-8 py-4 hover:bg-gray-400" />
+          <input type="submit" value="ORDER" name="submit" class="font-bold flex items-center justify-center rounded-xl bg-gradient-to-tr from-blue-100 to-[#20A3BF] p-4 hover:from-pink-500 hover:to-yellow-500" />
         </div>
       </form>
     </div>
