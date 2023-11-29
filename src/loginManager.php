@@ -9,26 +9,23 @@
 </head>
 
 <body>
-    <div class="container m-auto flex h-screen flex-col items-center justify-center p-4">
-        <form action="loginDb.php" method="post">
-            <h1 class="my-4 text-center">Manager Login</h1>
-            <?php if (isset($_GET['error'])) { ?>
-                <p class="border border-red-500 bg-red-300">
-                    <?php echo $_GET['error']; ?>
-                </p>
-            <?php } ?>
-            <div class="mb-4 flex flex-col gap-2">
-                <label for="username">Username</label>
-                <input type="text" name="username" class="border border-black" />
-            </div>
-            <div class="mb-4 flex flex-col gap-1">
-                <label for="password">Password</label>
-                <input type="password" name="password" class="border border-black" />
-            </div>
-            <div class="mb-4 flex flex-col gap-2">
-                <input type="submit" value="Login" name="managerLogin" class="border border-black hover:bg-gray-500" />
-            </div>
-        </form>
+    <div class="container m-auto flex h-screen flex-col items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-100 to-[#004AAD] p-6">
+        <div class="flex h-full w-full flex-col items-center justify-center gap-16 rounded-2xl bg-white p-6">
+            <form action="loginDb.php" method="post" class="flex w-full flex-col items-center justify-center gap-12">
+                <div>
+                    <h1 class="text-center text-5xl font-bold text-[#04466D]">Manager</h1>
+                    <h2 class="text-center text-3xl font-bold text-[#04466D]">Login</h2>
+                </div>
+                <div class="flex w-full flex-col gap-4">
+                    <?php if (isset($_GET['error'])) { ?>
+                        <p class="text-red-500 font-bold text-center"><?php echo $_GET['error']; ?></p>
+                    <?php } ?>
+                    <input type="text" name="username" placeholder="username" class="w-full rounded-lg border border-black p-2 text-xl focus:border-blue-500 focus:outline-none" />
+                    <input type="password" name="password" placeholder="password" class="w-full rounded-lg border border-black p-2 text-xl focus:border-blue-500 focus:outline-none" />
+                </div>
+                <input type="submit" value="LOGIN" name="managerLogin" class="rounded-xl bg-gradient-to-tr from-blue-100 to-[#20A3BF] px-4 py-2 text-center text-xl font-bold text-[#04466D] hover:from-pink-500 hover:to-yellow-500" />
+            </form>
+        </div>
     </div>
 </body>
 
