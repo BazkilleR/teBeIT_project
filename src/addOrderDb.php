@@ -28,10 +28,10 @@ $sql = "INSERT INTO order_list VALUES (NULL, '$product', $amount, $calculated_pr
 $result = $mysqli->query($sql);
 
 if ($result) {
-    header("Location: addOrder.php?success=Add order successfully.");
+    header("Location: homeSale.php?success=Add order successfully.");
     exit();
 } else {
-    header("Location: addOrder.php?error=error #3");
+    header("Location: homeSale.php?error=error #3");
     exit();
 }
 

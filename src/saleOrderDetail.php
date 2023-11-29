@@ -45,10 +45,24 @@
                         <p>Total price :</p>
                         <p class="font-bold text-blue-500">฿$price</p>
                     </div>
-                </div>
             HTML;
+
+            if ($status == "confirm") {
+                echo <<<HTML
+                    <hr>
+                    <div class="mx-4 h-full">
+                        <form action="deleteOrder.php?id=$id" method="post" class="flex flex-col items-center justify-center gap-2 text-lg bg-green-400 border-2 border-green-800 p-4 rounded-xl">
+                            <p>Confirm by xxxxx</p>
+                            <p>You can delete this order.</p>
+                            <input type="submit" href="deleteOrder.php?id=$id" value="DELETE" name="delete" class="px-8 py-2 bg-red-300 font-bold rounded-lg text-center hover:bg-red-500">
+                        </form>
+                    </div>
+                </div>
+                HTML;
+            }
         }
         ?>
+
     </div>
 </body>
 
