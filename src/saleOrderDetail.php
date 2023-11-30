@@ -25,6 +25,7 @@
             $price = $dbarr["price"];
             $sale_name = $dbarr["sale_name"];
             $status = $dbarr["status"];
+            $confirmBy = $dbarr["confirmBy"];
             echo <<<HTML
                 <div class="flex h-full w-full flex-col gap-4 overflow-y-auto rounded-2xl bg-white relative">
                     <a href="homeSale.php" class="absolute top-3 left-3 z-50 rounded-full bg-sky-gradient hover:bg-red-gradient"><img src="../src/img/back_icon.png" alt="back_icon" width="50" height="50"></a>
@@ -53,7 +54,7 @@
                     <hr>
                     <div class="mx-4 h-full">
                         <form action="deleteOrder.php?id=$id" method="post" class="flex flex-col items-center justify-center gap-2 text-lg bg-green-400 border-2 border-green-800 p-4 rounded-xl">
-                            <p>Confirm by xxxxx</p>
+                            <p>Confirm by $confirmBy</p>
                             <p>You can delete this order.</p>
                             <input type="submit" href="deleteOrder.php?id=$id" value="DELETE" name="delete" class="px-8 py-2 bg-red-300 font-bold rounded-lg text-center hover:bg-red-500">
                         </form>

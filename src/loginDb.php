@@ -50,6 +50,7 @@ if ($_POST["managerLogin"]) {
         $dbarr = $result->fetch_assoc();
 
         if ($dbarr && $username == $dbarr["username"] && $password == $dbarr["password"]) {
+            $_SESSION["username"] = $username;
             header("Location: homeManager.php");
             exit();
         } else {

@@ -1,11 +1,14 @@
 <?php
+session_start();
+
 require "server.php";
 
 if ($_POST["edit"]) {
     $id = $_GET["id"];
     $status = $_POST["status"];
+    $confirmBy = $_SESSION["username"];
 
-    $sql = "UPDATE order_list SET status='$status' WHERE id=$id";
+    $sql = "UPDATE order_list SET status='$status', confirmBy='$confirmBy' WHERE id=$id";
     $result = $mysqli->query($sql);
 
     if ($result) {

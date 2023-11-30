@@ -29,7 +29,7 @@ $amount = $_POST["amount"];
 $calculated_price = $amount * $prices["$product"];
 $sale_name = $_SESSION["username"];
 
-$sql = "INSERT INTO order_list VALUES (NULL, '$product', $amount, $calculated_price, '$sale_name', 'unconfirm', NOW())";
+$sql = "INSERT INTO order_list VALUES (NULL, '$product', $amount, $calculated_price, '$sale_name', 'unconfirm', '-', NOW())";
 $result = $mysqli->query($sql);
 
 if ($result) {
