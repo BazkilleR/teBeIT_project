@@ -26,7 +26,7 @@ if ($result) {
         echo <<<HTML
             <a href="saleOrderDetail.php?id=$id">
                 <div
-                    class="rounded-lg bg-gradient-to-tr from-blue-100 to-[#20A3BF] p-4 hover:from-pink-500 hover:to-yellow-500"
+                    class="rounded-lg bg-sky-gradient p-4 hover:bg-red-gradient"
                 >
                     <div class="flex items-center justify-between">
                     <div class="flex flex-col">
