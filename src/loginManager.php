@@ -10,7 +10,8 @@
 
 <body>
     <div class="container m-auto flex h-screen flex-col items-center justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-100 to-[#004AAD] p-6">
-        <div class="flex h-full w-full flex-col items-center justify-center gap-16 rounded-2xl bg-white p-6">
+        <div class="flex h-full w-full flex-col items-center justify-center gap-16 rounded-2xl bg-white p-6 relative">
+            <a href="index.html" class="absolute top-3 left-3 z-50 rounded-full bg-sky-400 hover:bg-red-500"><img src="../src/img/back_icon.png" alt="back_icon" width="50" height="50"></a>
             <form action="loginDb.php" method="post" class="flex w-full flex-col items-center justify-center gap-12">
                 <div>
                     <h1 class="text-center text-5xl font-bold text-[#04466D]">Manager</h1>

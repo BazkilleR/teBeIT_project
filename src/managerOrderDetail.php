@@ -26,7 +26,8 @@
             $sale_name = $dbarr["sale_name"];
             $status = $dbarr["status"];
             echo <<<HTML
-                <div class="flex h-full w-full flex-col gap-4 overflow-y-auto rounded-2xl bg-white">
+                <div class="flex h-full w-full flex-col gap-4 overflow-y-auto rounded-2xl bg-white relative">
+                    <a href="homeManager.php" class="absolute top-3 left-3 z-50 rounded-full bg-sky-400 hover:bg-red-500"><img src="../src/img/back_icon.png" alt="back_icon" width="50" height="50"></a>
                     <h1 class="mb-4 mt-4 text-center text-4xl font-bold">Order #$id</h1>
                     <div class="flex justify-between gap-4 bg-gray-300 p-4">
                         <img src="../src/img/$product_name.png" alt="$product_name" class="object-contain w-[20%] h-20" />
