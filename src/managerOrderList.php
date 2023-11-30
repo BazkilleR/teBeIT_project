@@ -1,7 +1,7 @@
 <?php
 require "server.php";
 
-$sql = "SELECT * FROM order_list LIMIT 5";
+$sql = "SELECT * FROM order_list";
 $result = $mysqli->query($sql);
 
 if ($result) {

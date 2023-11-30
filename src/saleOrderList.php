@@ -4,7 +4,7 @@ require "server.php";
 
 $username = $_SESSION["username"];
 
-$sql = "SELECT * FROM order_list WHERE sale_name='$username' LIMIT 5";
+$sql = "SELECT * FROM order_list WHERE sale_name='$username'";
 $result = $mysqli->query($sql);
 
 if ($result) {
