@@ -1,7 +1,7 @@
 <?php
 require "server.php";
 
-$sql = "SELECT * FROM order_list LIMIT 5";
+$sql = "SELECT * FROM order_list";
 $result = $mysqli->query($sql);
 
 if ($result) {
@@ -23,7 +23,7 @@ if ($result) {
         echo <<<HTML
             <a href="managerOrderDetail.php?id=$id">
                 <div
-                    class="rounded-lg bg-gradient-to-tr from-blue-100 to-[#20A3BF] p-4 hover:from-pink-500 hover:to-yellow-500"
+                    class="rounded-lg bg-sky-gradient p-4 hover:bg-red-gradient"
                 >
                     <div class="flex items-center justify-between">
                     <div class="flex flex-col">

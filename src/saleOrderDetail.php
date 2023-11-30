@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container m-auto h-screen gap-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-100 to-[#004AAD] p-6">
+    <div class="container m-auto h-screen gap-4 bg-blue-gradient p-6">
         <?php
         require "server.php";
 
@@ -25,8 +25,10 @@
             $price = $dbarr["price"];
             $sale_name = $dbarr["sale_name"];
             $status = $dbarr["status"];
+            $confirmBy = $dbarr["confirmBy"];
             echo <<<HTML
-                <div class="flex h-full w-full flex-col gap-4 overflow-y-auto rounded-2xl bg-white">
+                <div class="flex h-full w-full flex-col gap-4 overflow-y-auto rounded-2xl bg-white relative">
+                    <a href="homeSale.php" class="absolute top-3 left-3 z-50 rounded-full bg-sky-gradient hover:bg-red-gradient"><img src="../src/img/back_icon.png" alt="back_icon" width="50" height="50"></a>
                     <h1 class="mb-4 mt-4 text-center text-4xl font-bold">Order #$id</h1>
                     <div class="flex justify-between gap-4 bg-gray-300 p-4">
                         <img src="../src/img/$product_name.png" alt="$product_name" class="object-contain w-[20%] h-20" />
@@ -45,10 +47,24 @@
                         <p>Total price :</p>
                         <p class="font-bold text-blue-500">฿$price</p>
                     </div>
-                </div>
             HTML;
+
+            if ($status == "confirm") {
+                echo <<<HTML
+                    <hr>
+                    <div class="mx-4 h-full">
+                        <form action="deleteOrder.php?id=$id" method="post" class="flex flex-col items-center justify-center gap-2 text-lg bg-green-400 border-2 border-green-800 p-4 rounded-xl">
+                            <p>Confirm by $confirmBy</p>
+                            <p>You can delete this order.</p>
+                            <input type="submit" href="deleteOrder.php?id=$id" value="DELETE" name="delete" class="px-8 py-2 bg-red-300 font-bold rounded-lg text-center hover:bg-red-500">
+                        </form>
+                    </div>
+                </div>
+                HTML;
+            }
         }
         ?>
+
     </div>
 </body>
 
