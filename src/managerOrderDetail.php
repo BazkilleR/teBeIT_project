@@ -65,8 +65,19 @@
                             <input type="submit" value="edit" name="edit" class="font-bold rounded-lg bg-gradient-to-tr from-blue-100 to-[#20A3BF] h-full px-4 hover:from-pink-500 hover:to-yellow-500">
                         </form>
                     </div>
-                </div>
             HTML;
+            if (isset($_GET['success'])) {
+                $success_msg = $_GET['success'];
+                $changed = $_GET['changed'];
+                echo <<<HTML
+                    <hr>
+                    <div class="mx-4 flex items-center justify-between text-lg">
+                        <p class="bg-green-300 border-2 border-green-600 rounded-lg w-full py-2 font-bold text-center">$success_msg<br>$changed</p>
+                        
+                    </div>
+            HTML;
+            }
+            echo "</div>";
         }
         ?>
     </div>

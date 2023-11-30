@@ -9,7 +9,10 @@ if ($_POST["edit"]) {
     $result = $mysqli->query($sql);
 
     if ($result) {
-        header("Location: homeManager.php");
+        header("Location: managerOrderDetail.php?id=$id&success=Change status succesfully.&changed=Status now : $status");
+        exit();
+    } else {
+        header("Location: managerOrderDetail.php?error=Change status failure.");
         exit();
     }
 }

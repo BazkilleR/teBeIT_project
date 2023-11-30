@@ -4,12 +4,17 @@ session_start();
 require "server.php";
 
 if (!isset($_POST["submit"])) {
-    header("Location: addOrder.php?error=error #1");
+    header("Location: addOrder.php?error=Submit error.");
     exit();
 }
 
 if (empty($_POST["product"]) || empty($_POST["amount"])) {
-    header("Location: addOrder.php?error=error #2");
+    header("Location: addOrder.php?error=Please fill all field.");
+    exit();
+}
+
+if ($_POST["amount"] <= 0) {
+    header("Location: addOrder.php?error=Amount must be greater than 0.");
     exit();
 }
 

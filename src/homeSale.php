@@ -16,6 +16,9 @@
       <?php if (isset($_GET['success'])) { ?>
         <p class="bg-green-300 border-2 border-green-600 rounded-lg w-full py-2 font-bold text-center"><?php echo $_GET['success']; ?></p>
       <?php }
+      if (isset($_GET['error'])) { ?>
+        <p class="bg-red-300 border-2 border-red-600 rounded-lg w-full py-2 font-bold text-center"><?php echo $_GET['error']; ?></p>
+      <?php }
       require "saleOrderList.php"; ?>
       <a href="addOrder.php" class="flex items-center justify-center rounded-xl bg-gradient-to-tr from-blue-100 to-[#20A3BF] p-4 hover:from-pink-500 hover:to-yellow-500"><img src="../src/img/plus.png" alt="plus.png" /></a>
     </div>
