@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="bg-blue-gradient container m-auto h-screen gap-4 p-6">
+  <div class="bg-gradient-to-tr from-red-200 to-[#FF99AD] container m-auto h-screen gap-4 p-6">
     <div class="relative flex h-full w-full flex-col gap-4 overflow-y-auto rounded-2xl bg-white p-6">
       <a href="homeSale.php" class="absolute left-3 top-3 z-50 rounded-full bg-gradient-to-tr from-red-200 to-[#FF99AD] hover:from-pink-500 hover:to-yellow-500"><img src="../src/img/back_icon.png" alt="back_icon" width="50" height="50" /></a>
       <form action="addOrderDb.php" method="post">
