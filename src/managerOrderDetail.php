@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../build.css" />
+    <link rel="stylesheet" href="../dist/output.css" />
     <title>product detail</title>
 </head>
 
 <body>
-    <div class="container m-auto h-screen gap-4 bg-blue-gradient p-6">
+    <div class="container m-auto h-screen gap-4 bg-gradient-to-tr from-red-200 to-[#FF99AD] p-6">
         <?php
         require "server.php";
 
@@ -27,8 +28,8 @@
             $status = $dbarr["status"];
             echo <<<HTML
                 <div class="flex h-full w-full flex-col gap-4 overflow-y-auto rounded-2xl bg-white relative">
-                    <a href="homeManager.php" class="absolute top-3 left-3 z-50 rounded-full bg-sky-gradient hover:bg-red-gradient"><img src="../src/img/back_icon.png" alt="back_icon" width="50" height="50"></a>
-                    <h1 class="mb-4 mt-4 text-center text-4xl font-bold">Order #$id</h1>
+                    <a href="homeManager.php" class="absolute top-3 left-3 z-50 rounded-full bg-gradient-to-tr from-red-200 to-[#FF99AD] hover:from-pink-500 hover:to-yellow-500"><img src="../src/img/back_icon.png" alt="back_icon" width="50" height="50"></a>
+                    <h1 class="mb-4 mt-4 text-center text-4xl font-bold text-[#773051]">Order #$id</h1>
                     <div class="flex justify-between gap-4 bg-gray-300 p-4">
                         <img src="../src/img/$product_name.png" alt="$product_name" class="object-contain w-[20%] h-20" />
                         <div class="w-full">
@@ -62,7 +63,7 @@
             }
             echo <<<HTML
                             </select>
-                            <input type="submit" value="edit" name="edit" class="font-bold rounded-lg bg-sky-gradient h-full px-4 hover:bg-red-gradient">
+                            <input type="submit" value="edit" name="edit" class="font-bold rounded-lg bg-gradient-to-tr from-red-200 to-[#FF99AD] h-full px-4 hover:from-pink-500 hover:to-yellow-500">
                         </form>
                     </div>
             HTML;
