@@ -9,7 +9,7 @@ if ($_POST["saleLogin"]) {
     $password = $_POST["password"];
 
     if (empty($username) || empty($password)) {
-        header("Location: loginSale.php?error=Username or Password are invalid");
+        header("Location: saleLogin.php?error=Username or Password are invalid");
         exit();
     }
 
@@ -24,11 +24,11 @@ if ($_POST["saleLogin"]) {
             header("Location: homeSale.php");
             exit();
         } else {
-            header("Location: loginSale.php?error=Username or Password are invalid");
+            header("Location: saleLogin.php?error=Username or Password are invalid");
             exit();
         }
     } else {
-        header("Location: loginSale.php?error=Username or Password are invalid");
+        header("Location: saleLogin.php?error=Username or Password are invalid");
         exit();
     }
 }
@@ -39,7 +39,7 @@ if ($_POST["managerLogin"]) {
     $password = $_POST["password"];
 
     if (empty($username) || empty($password)) {
-        header("Location: loginManager.php?error=Username or Password are invalid");
+        header("Location: managerLogin.php?error=Username or Password are invalid");
         exit();
     }
 
@@ -54,11 +54,11 @@ if ($_POST["managerLogin"]) {
             header("Location: homeManager.php");
             exit();
         } else {
-            header("Location: loginManager.php?error=Username or Password are invalid");
+            header("Location: managerLogin.php?error=Username or Password are invalid");
             exit();
         }
     } else {
-        header("Location: loginManager.php?error=Username or Password are invalid");
+        header("Location: managerLogin.php?error=Username or Password are invalid");
         exit();
     }
 }
